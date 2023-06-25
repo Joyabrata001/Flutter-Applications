@@ -3,11 +3,13 @@ import 'clubs_model.dart';
 import 'club_main_screen.dart';
 
 class ClubHomePage extends StatelessWidget {
+  const ClubHomePage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('College Clubs'),
+        title: const Text('College Clubs'),
       ),
       body: _buildClubList(context),
     );
@@ -63,7 +65,7 @@ class ClubHomePage extends StatelessWidget {
       context: context,
       builder: (BuildContext context) => Dialog(
         child: Padding(
-          padding: EdgeInsets.all(16.0),
+          padding: const EdgeInsets.all(16.0),
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
@@ -76,15 +78,15 @@ class ClubHomePage extends StatelessWidget {
                   fit: BoxFit.fitWidth,
                 ),
               ),
-              SizedBox(height: 8),
+              const SizedBox(height: 8),
               Text(
                 club.name,
-                style: TextStyle(
+                style: const TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 24,
                 ),
               ),
-              SizedBox(height: 16),
+              const SizedBox(height: 16),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
@@ -95,17 +97,17 @@ class ClubHomePage extends StatelessWidget {
                         ),
                       );
                     },
-                    icon: Icon(Icons.info),
-                    label: Text('Tap to know more'),
+                    icon: const Icon(Icons.info),
+                    label: const Text('Tap to know more'),
                     style: ButtonStyle(
                       foregroundColor: MaterialStateProperty.all<Color>(Colors.blue),
                       padding: MaterialStateProperty.all<EdgeInsetsGeometry>(
-                        EdgeInsets.symmetric(vertical: 8, horizontal: 16),
+                        const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
                       ),
                       shape: MaterialStateProperty.all<OutlinedBorder>(
                         RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(8),
-                          side: BorderSide(color: Colors.blue),
+                          side: const BorderSide(color: Colors.blue),
                         ),
                       ),
                     ),

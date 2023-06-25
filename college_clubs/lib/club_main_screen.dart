@@ -4,7 +4,7 @@ import 'clubs_model.dart';
 class ClubDetailScreen extends StatelessWidget {
   final Club club;
 
-  const ClubDetailScreen({required this.club});
+  const ClubDetailScreen({super.key, required this.club});
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +13,7 @@ class ClubDetailScreen extends StatelessWidget {
       child: Scaffold(
         appBar: AppBar(
           title: Text(club.name),
-          bottom: TabBar(
+          bottom: const TabBar(
             tabs: [
               Tab(text: "Events"),
               Tab(text: "Gallery"),
@@ -24,11 +24,11 @@ class ClubDetailScreen extends StatelessWidget {
         body: TabBarView(
           children: [
             // Events tab
-            Center(
+            const Center(
               child: Text("Events"),
             ),
             // Gallery tab
-            Center(
+            const Center(
               child: Text("Gallery"),
             ),
             // About Us tab
@@ -43,12 +43,12 @@ class ClubDetailScreen extends StatelessWidget {
                       fit: BoxFit.contain,
                     ),
                   ),
-                  SizedBox(height: 16),
+                  const SizedBox(height: 16),
                   _buildSocialMediaLinks(context, club),
-                  SizedBox(height: 16),
+                  const SizedBox(height: 16),
                   Text(
                     club.description,
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontSize: 18,
                     ),
                   ),
@@ -97,10 +97,10 @@ class ClubDetailScreen extends StatelessWidget {
             icon,
             size: 20,
           ),
-          SizedBox(height: 8),
+          const SizedBox(height: 8),
           Text(
             title,
-            style: TextStyle(fontSize: 16),
+            style: const TextStyle(fontSize: 16),
           ),
         ],
       ),
